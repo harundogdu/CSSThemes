@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: background: #c31432;
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);
+    background: linear-gradient(to right, #240b36, #c31432);/ line-height: 1.5rem;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.clearfix {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding: 1.6rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Header */
+header {
+    height: 100vh;
+}
+
+header #top-bg {
+    position: absolute;
+    background-image: linear-gradient(to right top, rgba(231, 255, 255, 1), rgba(231, 76, 60, .2)), url(../img/top-bg3.jpg);
+    clip-path: polygon(0 56%, 0 10%, 100% 10%, 100% 100%);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+header h1 {
+    padding: 10rem;
+    padding-bottom: 0;
+    line-height: 50px;
+    color: #e74c3c;
+}
+
+header p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.content .btn {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #fff;
+    border: 1px solid #e74c3c;
+    padding: 1.6rem 3.2rem;
+    margin: 5rem 0 0 0;
+    transition: 200ms linear;
+    box-shadow:
+        1px 1px 4px #141414,
+        2px 2px 5px #141414,
+        3px 3px 6px #141414,
+        4px 4px 7px #141414,
+        5px 5px 8px #141414;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.content .btn:hover {
+    background-color: #fff;
+    color: #e74c3c;
+    transition: 200ms linear;
+    box-shadow:
+        1px 1px 1px #e74c3c,
+        2px 2px 3px #e74c3c,
+        3px 3px 2px #e74c3c,
+        4px 4px 5px #e74c3c,
+        5px 5px 2px #e74c3c;
+}
+
+/*
+.content {    
+    width: 100rem;
+    text-align: left;
+    color:#e74c3c;
+    line-height: 4.5rem;
+    padding: 11rem 11rem 0 6rem;
+}
+.content .button-top{
+    text-align: center;
+}
+.content p{
+    width: 70rem;
+    font-weight: 700;
+    color: #141414;
+}
+*/
+
+/* Section A */
+#section-a {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 3.2rem 0;
+}
+
+/* Section B*/
+#section-b {
+    padding: 2rem;
+}
+
+#section-b ul {
+    list-style: none;
+}
+
+#section-b li {
+    background-color: #fff;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 4.5rem;
+    box-shadow: 15px 15px 15px #141414;
+    transition: 200ms linear;
+}
+
+#section-b li:hover {
+    background-color: #fff;
+    color: #e74c3c;
+    transition: 200ms linear;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.col-content {
+    padding: 1.5rem;
+}
+
+/** Section C */
+#section-c {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 5rem;
+}
+
+/* Section D */
+#section-d .box {
+    padding: 5rem;
+}
+
+#section-d .box:last-child {
+    color: #fff;
+}
+
+#section-d .box:first-child {
+    background: #ED213A;
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    background: linear-gradient(to right, #93291E, #ED213A);
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    color: #fff;
+    padding: 4rem;
+    background-color: #000;
+}
+
+footer a {
+    color: #e74c3c;
+}
+
+/* Media Query*/
+
+@media screen and (max-width:500px) {
+    header h1 {
+        padding: 8rem 2rem;
+        padding-bottom: 0;
+        font-size: 2.5rem;
+        color: #fff;
+    }
+
+    header p {
+        color: #fff;
+        padding: 3rem 5rem 0 5rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    .box {
+        width: 100%;
+        float: left;
+    }
+
+}
+
+@media screen and (min-width:800px) {
+    #section-b li {
+        width: 85%;
+        margin: 1%;
+        display: inline-block;
+    }
+
+    .box {
+        width: 50%;
+        float: left;
+    }
+
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    #section-b li {
+        width: 45%;
+        margin: 1%;
+        display: inline-block;
+    }
+
+    .box {
+        width: 50%;
+        float: left;
+    }
+
+    html {
+        font-size: 12px;
+    }
+}
