@@ -1,0 +1,353 @@
+/* --------------------------------------- RESET-CSS --------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* --------------------------------------- FONT-FACE --------------------------------------- */
+
+@font-face {
+    font-family: 'Metropolis Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Metropolis Black'), url('./assets/font/Metropolis-Black.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Metropolis Extra Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Metropolis Extra Bold'), url('./assets/font/Metropolis-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Metropolis Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Metropolis Bold'), url('./assets/font/Metropolis-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Metropolis Semi Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Metropolis Semi Bold'), url('./assets/font/Metropolis-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Metropolis Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Metropolis Medium'), url('./assets/font/Metropolis-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Metropolis Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Metropolis Light'), url('./assets/font/Metropolis-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Metropolis Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Metropolis Thin'), url('./assets/font/Metropolis-Thin.woff') format('woff');
+}
+
+/* --------------------------------------- HEADER --------------------------------------- */
+header {
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 160px;
+    z-index: 1;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    color: #212529;
+    transition: all 0.3s ease-in-out;
+}
+
+.sticky .logo a,
+.sticky nav ul li a {
+    color: #212529;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: 'Metropolis Black';
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: .9rem;
+    font-family: 'Metropolis Bold';
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+/* --------------------------------------- MAIN --------------------------------------- */
+
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75vh;
+    background: no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #212529;
+    opacity: 0.5;
+}
+
+.main-slogan {
+    position: relative;
+    z-index: 1;
+}
+
+.main-title {
+    color: #fff;
+    font-size: 5rem;
+    font-family: 'Metropolis Black';
+    font-weight: 900;
+    text-align: center;
+}
+
+.main-description {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    display: block;
+    margin-top: 0.625rem;
+    color: #fff;
+    font-family: 'Metropolis Medium';
+    text-align: center;
+}
+
+/* --------------------------------------- CONTENT --------------------------------------- */
+
+.content {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+    box-sizing: border-box;
+    padding-top: 30.5rem;
+    margin: 0 auto;
+}
+
+.post-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 60px 40px 60px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.post-item:hover .post-title,
+.post-item:hover p {
+    color: #0085A1 !important;
+}
+
+.post-item .post-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: block;
+    color: #212529;
+    margin-top: 1.875rem;
+    margin-bottom: 0.625rem;
+    font-family: 'Metropolis Black';
+    font-weight: 900;
+}
+
+.post-item p {
+    font-size: 1.75rem;
+    line-height: 1.1;
+    display: block;
+    margin-top: 0.625rem;
+    color: #69707a;
+    font-family: 'Metropolis Light';
+    font-weight: 300;
+    margin-bottom: 0.625rem;
+    line-height: 1.2;
+}
+
+.post-item small {
+    font-size: 1.125rem;
+    font-style: italic;
+    margin-top: 0;
+    color: #6c757d;
+}
+
+.post-item small strong {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.content .button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.content .btn-older {
+    margin-top: 1.625rem;
+    letter-spacing: 0.0625em;
+    text-transform: uppercase !important;
+    color: #fff;
+    background-color: #0085A1;
+    border-color: #0085A1;
+    font-weight: 800;
+    line-height: 1.5;
+    cursor: pointer;
+    padding: 1rem 1.75rem;
+    font-size: 0.875rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.content .btn-older:hover {
+    color: #fff;
+    background-color: #007189;
+    border-color: #006a81;
+}
+
+/* --------------------------------------- FOOTER --------------------------------------- */
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #eaeaea;
+    padding: 40px 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+footer .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+footer .social-icons a {
+    background-color: #212529;
+    color: #fff;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+footer .social-icons a:hover {
+    background-color: #0085A1;
+    color: #fff;
+}
+
+footer .copyright {
+    color: #6c757d !important;
+    font-style: italic !important;
+    font-size: 1.2em;
+}
