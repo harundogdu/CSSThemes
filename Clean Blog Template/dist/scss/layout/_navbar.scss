@@ -3,19 +3,22 @@ nav {
   @include flex(space-between);
   position: relative;
   z-index: 2;
-  padding: $paddingSm;
+  padding: 0.5rem 3rem;
+  height: 85px;
   .brand-logo a {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: $white;
-    font-weight: $bold;
+    font-weight: $extraBold;
   }
   ul {
     @include flex;
     column-gap: 25px;
     li a {
-      font-size: 1rem;
       color: $white;
-      font-weight: $semiBold;
+      font-size: 0.75rem;
+      font-weight: $extraBold;
+      letter-spacing: 0.0625em;
+      text-transform: uppercase;
     }
   }
 }
