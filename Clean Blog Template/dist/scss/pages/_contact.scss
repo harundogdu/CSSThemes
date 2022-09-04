@@ -1,36 +1,39 @@
-main {
-  .form {
-    @include flex($direction: column);
+@import '../layout/navbar';
+@import '../layout/header';
+@import '../layout/main';
+@import '../layout/footer';
 
-    input {
-      border-color: transparent;
-      border-bottom: solid 2px $borderGray;
-      padding: $paddingSm;
-      width: 100%;
-      font-size: 1rem;
+.form {
+  @include flex($direction: column);
 
-      &:focus {
-        outline: none;
-      }
+  input {
+    border-color: transparent;
+    border-bottom: solid 2px $borderGray;
+    padding: $paddingSm;
+    width: 100%;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
     }
-    textarea {
-      border-color: transparent;
-      border-bottom: solid 1px $borderGray;
-      width: 100%;
-      padding: $paddingSm;
-      font-size: 1rem;
-      &:focus {
-        outline: none;
-      }
+  }
+  textarea {
+    border-color: transparent;
+    border-bottom: solid 1px $borderGray;
+    width: 100%;
+    padding: $paddingSm;
+    font-size: 1rem;
+    &:focus {
+      outline: none;
     }
+  }
 
-    .btn-send {
-      padding: $paddingSm;
-      @include flex($justify: flex-start);
-      width: 100%;
-      button {
-        @include button;
-      }
+  .btn-send {
+    padding: $paddingSm;
+    @include flex($justify: flex-start);
+    width: 100%;
+    button {
+      @include button;
     }
   }
 }

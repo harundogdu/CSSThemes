@@ -168,70 +168,159 @@ main.main {
   margin: 0 auto;
   padding-bottom: 3rem;
 }
-main.main .description {
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: 1px solid #e1e4e8;
+  padding: 2rem;
+  row-gap: 25px;
+}
+footer .socials-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+footer .socials-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+footer .socials-icons a:hover {
+  background-color: #0085a1;
+  color: #fff;
+}
+footer .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+footer .info p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.description {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.5;
   margin-bottom: 2rem;
 }
-main.main .blog-post-item {
-  display: block;
-  color: #000000;
-  margin-bottom: 3rem;
-  border-bottom: 1px solid #e1e4e8;
-  padding-bottom: 2rem;
-  transition: all 0.2s ease-in-out;
-  /* TODO: buraya fix atılacak : son elemanın margin bottom değeri temizlenecek */
-}
-main.main .blog-post-item__title {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-main.main .blog-post-item__subtitle {
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-main.main .blog-post-item__footer {
-  font-size: 0.9rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
-}
-main.main .blog-post-item:hover {
-  color: #0085a1;
-}
-main.main .btn-container {
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-direction: row;
+  position: relative;
+  z-index: 2;
+  padding: 0.5rem 3rem;
+  height: 85px;
 }
-main.main .btn-container button {
-  padding: 1rem 2rem;
-  border: none;
-  background-color: #0085a1;
+nav .brand-logo a {
+  font-size: 1.6rem;
   color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  font-weight: 800;
 }
-main.main .btn-container button:hover {
-  background-color: #005b6e;
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
 }
-main.main figure figcaption {
-  text-align: center;
-  font-size: 0.8rem;
-  font-weight: 300;
-  margin-top: 0.625rem;
-  color: #6c757d;
-  margin-bottom: 1rem;
+nav ul li a {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
 }
-main.main .post-subtitle {
-  font-size: 1.5rem;
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 75vh;
+  background-image: url("https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
+}
+header h1 {
+  font-size: 5rem;
+  color: #fff;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin: 0;
+  padding: 0;
+  margin-top: 10vh;
+  z-index: 2;
+}
+header p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  font-family: "Open Sans";
+  z-index: 2;
+}
+header small {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  z-index: 2;
+}
+header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #212832;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+main.main {
+  width: 100%;
+  height: 100%;
+  padding-top: 35rem;
+  max-width: 768px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
 }
 
 footer {
@@ -281,33 +370,33 @@ footer .info p {
   color: #000000;
 }
 
-main .form {
+.form {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-main .form input {
+.form input {
   border-color: transparent;
   border-bottom: solid 2px #e1e4e8;
   padding: 1rem;
   width: 100%;
   font-size: 1rem;
 }
-main .form input:focus {
+.form input:focus {
   outline: none;
 }
-main .form textarea {
+.form textarea {
   border-color: transparent;
   border-bottom: solid 1px #e1e4e8;
   width: 100%;
   padding: 1rem;
   font-size: 1rem;
 }
-main .form textarea:focus {
+.form textarea:focus {
   outline: none;
 }
-main .form .btn-send {
+.form .btn-send {
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -315,7 +404,7 @@ main .form .btn-send {
   flex-direction: row;
   width: 100%;
 }
-main .form .btn-send button {
+.form .btn-send button {
   padding: 1rem 2rem;
   border: none;
   background-color: #0085a1;
@@ -325,6 +414,370 @@ main .form .btn-send button {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-main .form .btn-send button:hover {
+.form .btn-send button:hover {
   background-color: #005b6e;
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  z-index: 2;
+  padding: 0.5rem 3rem;
+  height: 85px;
+}
+nav .brand-logo a {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 800;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+nav ul li a {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 75vh;
+  background-image: url("https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
+}
+header h1 {
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-top: 10vh;
+  z-index: 2;
+}
+header p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  font-family: "Open Sans";
+  z-index: 2;
+}
+header small {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  z-index: 2;
+}
+header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #212832;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+main.main {
+  width: 100%;
+  height: 100%;
+  padding-top: 35rem;
+  max-width: 768px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: 1px solid #e1e4e8;
+  padding: 2rem;
+  row-gap: 25px;
+}
+footer .socials-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+footer .socials-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+footer .socials-icons a:hover {
+  background-color: #0085a1;
+  color: #fff;
+}
+footer .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+footer .info p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.blog-post-item {
+  display: block;
+  color: #000000;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 2rem;
+  transition: all 0.2s ease-in-out;
+  /* TODO: buraya fix atılacak : son elemanın margin bottom değeri temizlenecek */
+}
+.blog-post-item__title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.blog-post-item__subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.blog-post-item__footer {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.blog-post-item:hover {
+  color: #0085a1;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.btn-container button {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #0085a1;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn-container button:hover {
+  background-color: #005b6e;
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  z-index: 2;
+  padding: 0.5rem 3rem;
+  height: 85px;
+}
+nav .brand-logo a {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 800;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+nav ul li a {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 75vh;
+  background-image: url("https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
+}
+header h1 {
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-top: 10vh;
+  z-index: 2;
+}
+header p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  font-family: "Open Sans";
+  z-index: 2;
+}
+header small {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  z-index: 2;
+}
+header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #212832;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+main.main {
+  width: 100%;
+  height: 100%;
+  padding-top: 35rem;
+  max-width: 768px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: 1px solid #e1e4e8;
+  padding: 2rem;
+  row-gap: 25px;
+}
+footer .socials-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+footer .socials-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+footer .socials-icons a:hover {
+  background-color: #0085a1;
+  color: #fff;
+}
+footer .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+footer .info p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+figure figcaption {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-top: 0.625rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.post-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */

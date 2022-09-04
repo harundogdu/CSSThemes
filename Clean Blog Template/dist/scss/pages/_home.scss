@@ -1,0 +1,40 @@
+@import '../layout/navbar';
+@import '../layout/header';
+@import '../layout/main';
+@import '../layout/footer';
+
+.blog-post-item {
+  display: block;
+  color: $black;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid $borderGray;
+  padding-bottom: 2rem;
+  transition: $transition;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: $extraBold;
+    margin-bottom: 1rem;
+  }
+  &__subtitle {
+    font-size: 1.1rem;
+    font-weight: $regular;
+    margin-bottom: 1rem;
+  }
+  &__footer {
+    font-size: 0.9rem;
+    font-weight: $light;
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    color: $blue;
+  }
+  /* TODO: buraya fix atılacak : son elemanın margin bottom değeri temizlenecek */
+}
+.btn-container {
+  @include flex($justify: flex-end);
+  button {
+    @include button;
+  }
+}

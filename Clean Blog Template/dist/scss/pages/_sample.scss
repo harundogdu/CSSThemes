@@ -1,0 +1,28 @@
+@import '../layout/navbar';
+@import '../layout/header';
+@import '../layout/main';
+@import '../layout/footer';
+
+.description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+figure {
+  figcaption {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: $light;
+    margin-top: 0.625rem;
+    color: $textGray;
+    margin-bottom: 1rem;
+  }
+}
+
+.post-subtitle {
+  font-size: 1.5rem;
+  font-weight: $bold;
+  margin-bottom: 1rem;
+}
