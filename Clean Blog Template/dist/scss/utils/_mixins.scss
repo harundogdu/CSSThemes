@@ -11,3 +11,17 @@
   margin: 0 auto;
   padding: 0 3rem;
 }
+
+@mixin button {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: $blue;
+  color: $white;
+  font-size: 1rem;
+  font-weight: $semiBold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: darken($blue, 10%);
+  }
+}

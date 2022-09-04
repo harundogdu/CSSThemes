@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,9 +53,46 @@ a {
   text-decoration: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* ====================================== COLORS ====================================== */
 /* ====================================== Padding ====================================== */
 /* ====================================== Font Weight ====================================== */
+/* ====================================== Transition  ====================================== */
+nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+}
+nav .brand-logo a {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 700;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+nav ul li a {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -99,34 +137,104 @@ header::before {
   z-index: 1;
 }
 
-nav {
+main {
   width: 100%;
-  max-width: 1200px;
+  height: 100%;
+  padding-top: 35rem;
+  max-width: 640px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding-bottom: 3rem;
+}
+main .blog-post-item {
+  display: block;
+  color: #000000;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 2rem;
+  transition: all 0.2s ease-in-out;
+  /* TODO: buraya fix atılacak : son elemanın margin bottom değeri temizlenecek */
+}
+main .blog-post-item:hover {
+  color: #0085a1;
+}
+main .blog-post-item .blog-post-item-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+main .blog-post-item .blog-post-item-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+main .blog-post-item .blog-post-item-footer {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+main .btn-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: row;
-  position: relative;
-  z-index: 2;
-  padding: 1rem;
 }
-nav .brand-logo a {
-  font-size: 1.4rem;
+main .btn-container button {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #0085a1;
   color: #fff;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-nav ul {
+main .btn-container button:hover {
+  background-color: #005b6e;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: 1px solid #e1e4e8;
+  padding: 2rem;
+  row-gap: 25px;
+}
+footer .socials-icons {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
-nav ul li a {
-  font-size: 1rem;
+footer .socials-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
   color: #fff;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+footer .socials-icons a:hover {
+  background-color: #0085a1;
+  color: #fff;
+}
+footer .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+footer .info p {
+  font-size: 1rem;
   font-weight: 600;
+  color: #000000;
 }/*# sourceMappingURL=style.css.map */

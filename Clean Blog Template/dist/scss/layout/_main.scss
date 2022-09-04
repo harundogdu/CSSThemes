@@ -1,0 +1,41 @@
+main {
+  width: 100%;
+  height: 100%;
+  padding-top: 35rem;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  .blog-post-item {
+    display: block;
+    color: $black;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid $borderGray;
+    padding-bottom: 2rem;
+    transition: $transition;
+    &:hover{
+      color: $blue;
+    }
+    .blog-post-item-title {
+      font-size: 2rem;
+      font-weight: $extraBold;
+      margin-bottom: 1rem;
+    }
+    .blog-post-item-subtitle {
+      font-size: 1.2rem;
+      font-weight: $semiBold;
+      margin-bottom: 1rem;
+    }
+    .blog-post-item-footer {
+      font-size: 1rem;
+      font-weight: $semiBold;
+      margin-bottom: 1rem;
+    }
+    /* TODO: buraya fix atılacak : son elemanın margin bottom değeri temizlenecek */
+  }
+  .btn-container {
+    @include flex($justify: flex-end);
+    button {
+      @include button;
+    }
+  }
+}
