@@ -2,7 +2,7 @@ main.main {
   width: 100%;
   height: 100%;
   padding-top: 35rem;
-  max-width: 640px;
+  max-width: 768px;
   margin: 0 auto;
   padding-bottom: 3rem;
   .description {
@@ -45,5 +45,20 @@ main.main {
     button {
       @include button;
     }
+  }
+  figure{
+    figcaption{
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: $light;
+      margin-top: 0.625rem;
+      color: $textGray;
+      margin-bottom: 1rem;
+    }
+  }
+  .post-subtitle{
+    font-size: 1.5rem;
+    font-weight: $bold;
+    margin-bottom: 1rem;
   }
 }

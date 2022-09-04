@@ -30,6 +30,15 @@ header {
     font-family: 'Open Sans';
     z-index: 2;
   }
+  small{
+    font-size: .8rem;
+    font-weight: $medium;
+    color: $white;
+    line-height: 1.1;
+    display: block;
+    margin-top: 0.625rem;
+    z-index: 2;
+  }
 
   &::before {
     content: '';
