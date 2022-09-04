@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
 }
 
 body {
@@ -278,4 +279,52 @@ footer .info p {
   font-size: 1rem;
   font-weight: 600;
   color: #000000;
+}
+
+main .form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .form input {
+  border-color: transparent;
+  border-bottom: solid 2px #e1e4e8;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1rem;
+}
+main .form input:focus {
+  outline: none;
+}
+main .form textarea {
+  border-color: transparent;
+  border-bottom: solid 1px #e1e4e8;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+main .form textarea:focus {
+  outline: none;
+}
+main .form .btn-send {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+}
+main .form .btn-send button {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #0085a1;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+main .form .btn-send button:hover {
+  background-color: #005b6e;
 }/*# sourceMappingURL=style.css.map */
