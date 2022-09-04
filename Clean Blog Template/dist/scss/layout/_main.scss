@@ -5,6 +5,12 @@ main.main {
   max-width: 640px;
   margin: 0 auto;
   padding-bottom: 3rem;
+  .description {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
   .blog-post-item {
     display: block;
     color: $black;
@@ -24,7 +30,7 @@ main.main {
       margin-bottom: 1rem;
     }
     &__footer {
-      font-size: .9rem;
+      font-size: 0.9rem;
       font-weight: $light;
       margin-bottom: 1rem;
     }

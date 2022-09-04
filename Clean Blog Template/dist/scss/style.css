@@ -158,6 +158,12 @@ main.main {
   margin: 0 auto;
   padding-bottom: 3rem;
 }
+main.main .description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
 main.main .blog-post-item {
   display: block;
   color: #000000;
