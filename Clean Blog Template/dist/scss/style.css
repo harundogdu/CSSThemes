@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* ====================================== COLORS ====================================== */
+/* ====================================== Padding ====================================== */
+/* ====================================== Font Weight ====================================== */
+/* ====================================== Transition  ====================================== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
@@ -9,6 +13,27 @@
 
 body {
   font-family: "Poppins", sans-serif !important;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  max-width: 1920px;
+  width: 100%;
+  border-bottom: 1px solid #e1e4e8;
+  margin: 0 auto;
+  padding: 0.5rem 3rem;
+}
+.sticky .brand-logo a {
+  color: #000000;
+}
+.sticky a {
+  color: #000000;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -65,10 +90,6 @@ a {
   text-decoration: none;
 }
 
-/* ====================================== COLORS ====================================== */
-/* ====================================== Padding ====================================== */
-/* ====================================== Font Weight ====================================== */
-/* ====================================== Transition  ====================================== */
 nav {
   width: 100%;
   max-width: 1200px;
@@ -78,6 +99,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  transition: all 0.1s ease-in-out;
   position: relative;
   z-index: 2;
   padding: 0.5rem 3rem;
@@ -198,7 +220,7 @@ footer .socials-icons a {
   font-size: 1.5rem;
   padding: 10px;
   border-radius: 50%;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 footer .socials-icons a:hover {
   background-color: #0085a1;
@@ -221,153 +243,6 @@ footer .info p {
   font-weight: 300;
   line-height: 1.5;
   margin-bottom: 2rem;
-}
-
-nav {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  position: relative;
-  z-index: 2;
-  padding: 0.5rem 3rem;
-  height: 85px;
-}
-nav .brand-logo a {
-  font-size: 1.6rem;
-  color: #fff;
-  font-weight: 800;
-}
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
-}
-nav ul li a {
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.0625em;
-  text-transform: uppercase;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 75vh;
-  background-image: url("https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-top: 12.5rem;
-  padding-bottom: 12.5rem;
-}
-header h1 {
-  font-size: 5rem;
-  color: #fff;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  margin-top: 10vh;
-  z-index: 2;
-}
-header p {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #fff;
-  line-height: 1.1;
-  display: block;
-  margin-top: 0.625rem;
-  font-family: "Open Sans";
-  z-index: 2;
-}
-header small {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #fff;
-  line-height: 1.1;
-  display: block;
-  margin-top: 0.625rem;
-  z-index: 2;
-}
-header::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: #212832;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-main.main {
-  width: 100%;
-  height: 100%;
-  padding-top: 35rem;
-  max-width: 768px;
-  margin: 0 auto;
-  padding-bottom: 3rem;
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-top: 1px solid #e1e4e8;
-  padding: 2rem;
-  row-gap: 25px;
-}
-footer .socials-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-footer .socials-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  width: 50px;
-  height: 50px;
-  background-color: #000000;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 10px;
-  border-radius: 50%;
-  transition: all 0.2s ease-in-out;
-}
-footer .socials-icons a:hover {
-  background-color: #0085a1;
-  color: #fff;
-}
-footer .info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-footer .info p {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000000;
 }
 
 .form {
@@ -418,160 +293,13 @@ footer .info p {
   background-color: #005b6e;
 }
 
-nav {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  position: relative;
-  z-index: 2;
-  padding: 0.5rem 3rem;
-  height: 85px;
-}
-nav .brand-logo a {
-  font-size: 1.6rem;
-  color: #fff;
-  font-weight: 800;
-}
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
-}
-nav ul li a {
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.0625em;
-  text-transform: uppercase;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 75vh;
-  background-image: url("https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-top: 12.5rem;
-  padding-bottom: 12.5rem;
-}
-header h1 {
-  font-size: 5rem;
-  color: #fff;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  margin-top: 10vh;
-  z-index: 2;
-}
-header p {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #fff;
-  line-height: 1.1;
-  display: block;
-  margin-top: 0.625rem;
-  font-family: "Open Sans";
-  z-index: 2;
-}
-header small {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #fff;
-  line-height: 1.1;
-  display: block;
-  margin-top: 0.625rem;
-  z-index: 2;
-}
-header::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: #212832;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-main.main {
-  width: 100%;
-  height: 100%;
-  padding-top: 35rem;
-  max-width: 768px;
-  margin: 0 auto;
-  padding-bottom: 3rem;
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-top: 1px solid #e1e4e8;
-  padding: 2rem;
-  row-gap: 25px;
-}
-footer .socials-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-footer .socials-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  width: 50px;
-  height: 50px;
-  background-color: #000000;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 10px;
-  border-radius: 50%;
-  transition: all 0.2s ease-in-out;
-}
-footer .socials-icons a:hover {
-  background-color: #0085a1;
-  color: #fff;
-}
-footer .info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-footer .info p {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000000;
-}
-
 .blog-post-item {
   display: block;
   color: #000000;
   margin-bottom: 3rem;
   border-bottom: 1px solid #e1e4e8;
   padding-bottom: 2rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   /* TODO: buraya fix atılacak : son elemanın margin bottom değeri temizlenecek */
 }
 .blog-post-item__title {
@@ -611,153 +339,6 @@ footer .info p {
 }
 .btn-container button:hover {
   background-color: #005b6e;
-}
-
-nav {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  position: relative;
-  z-index: 2;
-  padding: 0.5rem 3rem;
-  height: 85px;
-}
-nav .brand-logo a {
-  font-size: 1.6rem;
-  color: #fff;
-  font-weight: 800;
-}
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
-}
-nav ul li a {
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.0625em;
-  text-transform: uppercase;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 75vh;
-  background-image: url("https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-top: 12.5rem;
-  padding-bottom: 12.5rem;
-}
-header h1 {
-  font-size: 5rem;
-  color: #fff;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  margin-top: 10vh;
-  z-index: 2;
-}
-header p {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #fff;
-  line-height: 1.1;
-  display: block;
-  margin-top: 0.625rem;
-  font-family: "Open Sans";
-  z-index: 2;
-}
-header small {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #fff;
-  line-height: 1.1;
-  display: block;
-  margin-top: 0.625rem;
-  z-index: 2;
-}
-header::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: #212832;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-main.main {
-  width: 100%;
-  height: 100%;
-  padding-top: 35rem;
-  max-width: 768px;
-  margin: 0 auto;
-  padding-bottom: 3rem;
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-top: 1px solid #e1e4e8;
-  padding: 2rem;
-  row-gap: 25px;
-}
-footer .socials-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-footer .socials-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  width: 50px;
-  height: 50px;
-  background-color: #000000;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 10px;
-  border-radius: 50%;
-  transition: all 0.2s ease-in-out;
-}
-footer .socials-icons a:hover {
-  background-color: #0085a1;
-  color: #fff;
-}
-footer .info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-footer .info p {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000000;
 }
 
 .description {
