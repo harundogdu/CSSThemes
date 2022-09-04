@@ -1,5 +1,13 @@
-@mixin flex($justify: center) {
+@mixin flex($justify: center, $direction: row, $align: center) {
   display: flex;
-  align-items: center;
+  align-items: $align;
   justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
 }

@@ -1,0 +1,21 @@
+nav {
+  @include container;
+  @include flex(space-between);
+  position: relative;
+  z-index: 1;
+  padding: $paddingSm;
+  .brand-logo a {
+    font-size: 1.4rem;
+    color: $white;
+    font-weight: $bold;
+  }
+  ul {
+    @include flex;
+    column-gap: 25px;
+    li a {
+      font-size: 1rem;
+      color: $white;
+      font-weight: $semiBold;
+    }
+  }
+}
